@@ -1,8 +1,9 @@
 <?php
-class oxac_extproducturl_setup
-{
-    
-    
+
+namespace OxidEsales\OxidAcademy\ExtProductUrl\Controller;
+
+class ExtProductUrl_Setup {
+
     /**
      * Execute action on activate event
      */
@@ -11,9 +12,7 @@ class oxac_extproducturl_setup
     	self::addFields();
     	self::_rebuildViews();
     }
-    
-    
-    
+
     /**
      * Execute action on deactivate event
      */
@@ -22,38 +21,30 @@ class oxac_extproducturl_setup
     	self::removeFields();
     	self::_rebuildViews();
     }
-    
-    
-    
+
     /**
      * Add database fields
      */
     public static function addFields()
     {
-    	$sSql = "ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURLLABEL` VARCHAR( 255 ) NOT NULL;";    
-    	oxDb::getDb()->execute($sSql);
+        $Db = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
+    	$Db->execute("ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURLLABEL` VARCHAR( 255 ) NOT NULL;");
 
     	// imply multilang field creation. OXID will automatically create all the required fields.
-    	$sSql = "ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURLLABEL_1` VARCHAR( 255 ) NOT NULL;";
-    	oxDb::getDb()->execute($sSql);
-    	
-    	$sSql = "ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURL` VARCHAR( 255 ) NOT NULL;";
-    	oxDb::getDb()->execute($sSql);
+        $Db->execute("ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURLLABEL_1` VARCHAR( 255 ) NOT NULL;");
+
+        $Db->execute("ALTER TABLE  `oxarticles` ADD  `OXAC_EXTPRODUCTURL` VARCHAR( 255 ) NOT NULL;");
     }
-    
-    
-    
+
     /**
      * Remove database fields
      */
     public static function removeFields()
     {
-    	$sSql = "ALTER TABLE `oxarticles` DROP `OXAC_EXTPRODUCTURL`, DROP `OXAC_EXTPRODUCTURLLABEL`;";
-    	oxDb::getDb()->execute($sSql);
+        $Db = \OxidEsales\Eshop\Core\DatabaseProvider::getDb();
+    	$Db->execute("ALTER TABLE `oxarticles` DROP `OXAC_EXTPRODUCTURL`, DROP `OXAC_EXTPRODUCTURLLABEL`;");
     }
-    
-    
-    
+
     /**
      * Rebuild Views (see also: "devguide")
      *
