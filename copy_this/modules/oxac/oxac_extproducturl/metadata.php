@@ -23,7 +23,7 @@ $aModule = array(
     'author'		=>	'Johannes Ackermann',
     'url'			=>	'http://www.oxid-esales.com/',
     'email'			=>	'johannes.ackermann@oxid-esales.com',
-    'files'			=>	array(
+    'controllers'	=>	array(
 
         // Core
         'oxac_extproducturl_setup'	=>	\OxidEsales\OxidAcademy\ExtProductUrl\Controller\ExtProductUrl_Setup::class,
