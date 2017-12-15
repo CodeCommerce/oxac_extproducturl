@@ -1,6 +1,6 @@
 <?php
 
-namespace OxidEsales\OxidAcademy\ExtProductUrl\Controller;
+namespace OxidEsales\OxidAcademy\ExtProductUrlModule\Controller;
 
 class ExtProductUrl_Setup {
 

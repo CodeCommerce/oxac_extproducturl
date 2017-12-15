@@ -24,19 +24,16 @@ $aModule = [
     'url'           =>  'https://www.oxid-esales.com/oxid-welt/academy/schulungen/',
     'email'         =>  'johannes.ackermann@oxid-esales.com',
     'controllers'   =>  [
-
         // Core
-        'oxac_extproducturl_setup'  =>  \OxidEsales\OxidAcademy\ExtProductUrl\Controller\ExtProductUrl_Setup::class,
+        'oxac_extproducturl_setup'  =>  \OxidEsales\OxidAcademy\ExtProductUrlModule\Controller\ExtProductUrl_Setup::class,
     ],
     'blocks'        =>  [
-
         // Admin back-end
         [
             'template'  =>  'article_main.tpl',
             'block'     =>  'admin_article_main_form',
             'file'      =>  'views/blocks/admin/urlanddescription.tpl'
         ],
-
         // Pages
         [
             'template'  => 'page/details/inc/productmain.tpl',
@@ -45,7 +42,7 @@ $aModule = [
         ],
     ],
     'events'        =>  [
-        'onActivate'        =>  '\OxidEsales\OxidAcademy\ExtProductUrl\Controller\ExtProductUrl_Setup::onActivate',
-        'onDeactivate'      =>  '\OxidEsales\OxidAcademy\ExtProductUrl\Controller\ExtProductUrl_Setup::onDeactivate',
+        'onActivate'        =>  '\OxidEsales\OxidAcademy\ExtProductUrlModule\Controller\ExtProductUrl_Setup::onActivate',
+        'onDeactivate'      =>  '\OxidEsales\OxidAcademy\ExtProductUrlModule\Controller\ExtProductUrl_Setup::onDeactivate',
     ],
 ];
