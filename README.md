@@ -12,16 +12,14 @@ Displays a hyperlink on top of the article details page.
 * Check-out this module and move it to the directory you just created
 * Add the repository to your project's compser.json, e.g. like this:
 
-    `"repositories": {
-        "oxid-academy/vendorbasics": {
-            "type": "path",
-            "url": "extensions/oxac_vendorbasics/"
-        },
+  ```json
+    "repositories": {
         "oxid-academy/extproducturl": {
             "type": "path",
             "url": "extensions/oxac_extproducturl/"
         }
-    }`    
+    }
+  ```    
 
 * Be aware that you need to extend the "repositories" section if it already exists. Take care about the JSON syntax.
 * Run `composer update`
