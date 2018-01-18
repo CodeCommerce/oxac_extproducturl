@@ -1,15 +1,34 @@
 OXID Academy Sample Modules: External addresses for article details pages
 =========================================================================
 
-#Description
+# Description
 
 Sample Module for training purposes.
 Displays a hyperlink on top of the article details page.
 
-#Use
+# Install
 
-* Copy the contents of the `copy_this` folder to your shop's root directory (where the `config.inc.php` file is located).
-* In the shop admin, open "Extensions", "Modules", select "External addresses for article details pages" and click "activate".
+* Create a local directory for repositories in your project, e.g. `oxideshop/extensions`.
+* Check-out this module and move it to the directory you just created
+* Add the repository to your project's compser.json, e.g. like this:
+
+    `"repositories": {
+        "oxid-academy/vendorbasics": {
+            "type": "path",
+            "url": "extensions/oxac_vendorbasics/"
+        },
+        "oxid-academy/extproducturl": {
+            "type": "path",
+            "url": "extensions/oxac_extproducturl/"
+        }
+    }`    
+
+* Be aware that you need to extend the "repositories" section if it already exists. Take care about the JSON syntax.
+* Run `composer update`
+* When Composer is done, go to the shop admin, open "Extensions", "Modules", select "External addresses for article details pages" and click "activate".
+
+# Use
+
 * Open "Articles" and "Administer articles". At the bottom you will see two input fields. Enter a hyperlink and a title. The information will appear on top of the details page.
 
 # Compatibility:
