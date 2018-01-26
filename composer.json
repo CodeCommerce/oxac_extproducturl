@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "OxidEsales\\OxidAcademy\\ExtProductUrlModule\\": "../../../source/modules/oxac/oxac_extproducturl"
+      "OxidAcademy\\ExtProductUrlModule\\": "../../../source/modules/oxac/oxac_extproducturl"
     }
   }
 }
