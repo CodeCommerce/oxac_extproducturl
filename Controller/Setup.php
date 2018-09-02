@@ -51,7 +51,7 @@ class Setup extends Base {
      */
     private static function _rebuildViews()
     {
-    	if (oxRegistry::getSession()->getVariable('malladmin')){
+    	if (\OxidEsales\Eshop\Core\Registry::getSession()->getVariable('malladmin')){
     		$oMetaData = oxNew('oxDbMetaDataHandler');
     		$oMetaData->updateViews();
     	}
