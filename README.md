@@ -13,6 +13,11 @@ Displays a hyperlink on top of the article details page.
 * Add the repository to your project's compser.json, e.g. like this:
 
   ```json
+  "require": {
+    ...
+    "oxid-academy/extproducturl": "^1.0"
+  },
+  ...
     "repositories": {
         "oxid-academy/extproducturl": {
             "type": "path",
